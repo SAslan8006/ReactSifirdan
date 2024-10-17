@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import Button from './components/buttons/';
+import Input from './components/input/index';
+import CheckBox from './components/checkbox';
 
 function App() {
   const [state, setState] = useState("Merhaba");
@@ -24,7 +26,8 @@ function App() {
       </h1>
       <h1 className='text-3xl text-red-400 font-bold cursor-pointer' onClick={() => setState("Ali")}> Değiştir</h1>
       <Button title='artır' />
-
+      <Input />
+      <CheckBox />
     </>
   )
 }
