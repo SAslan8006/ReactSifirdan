@@ -3,6 +3,7 @@ import './App.css'
 import Button from './components/buttons/';
 import Input from './components/input/index';
 import CheckBox from './components/checkbox';
+import Login from './components/login';
 
 function App() {
   const [state, setState] = useState("Merhaba");
@@ -18,7 +19,7 @@ function App() {
 
   return (
     < >
-      {state}{counter}
+      {/* {state}{counter}
       <h1 className="text-3xl font-bold justify-center">
         {data.map((item) => (
           <div className="text-3xl font-bold mt-3 bg-red-400 justify-center items-center rounded-md" key={item.id}>{item.name}</div>
@@ -27,7 +28,8 @@ function App() {
       <h1 className='text-3xl text-red-400 font-bold cursor-pointer' onClick={() => setState("Ali")}> Değiştir</h1>
       <Button title='artır' />
       <Input />
-      <CheckBox />
+      <CheckBox /> */}
+      <Login />
     </>
   )
 }
