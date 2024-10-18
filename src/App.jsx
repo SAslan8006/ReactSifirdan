@@ -1,25 +1,29 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import './App.css'
 import Button from './components/buttons/';
-import Input from './components/input/index';
-import CheckBox from './components/checkbox';
+// import Input from './components/input/index';
+// import CheckBox from './components/checkbox';
 import Login from './components/login';
+import { MyComponent } from './MyComponent';
+import { MyContext } from './context/MyContext';
 
 function App() {
-  const [state, setState] = useState("Merhaba");
-  Number(localStorage.setItem("counter", 25))
-  const [counter, setCounter] = useState(
-    localStorage.getItem("counter") ? Number(localStorage.getItem("counter")) : 0
-  )
-  const data = [
-    { id: 1, name: "süleyman" },
-    { id: 2, name: "süleyman2" },
-    { id: 3, name: "süleyman3" },
-  ]
+  // const [state, setState] = useState("Merhaba");
+  // Number(localStorage.setItem("counter", 25))
+  // const [counter, setCounter] = useState(
+  //   localStorage.getItem("counter") ? Number(localStorage.getItem("counter")) : 0
+  // )
+  // const data = [
+  //   { id: 1, name: "süleyman" },
+  //   { id: 2, name: "süleyman2" },
+  //   { id: 3, name: "süleyman3" },
+  // ]
 
+  const { count, setCount } = useContext(MyContext);
   return (
-    < >
-      {/* {state}{counter}
+    <div>
+      <div>
+        {/* {state}{counter}
       <h1 className="text-3xl font-bold justify-center">
         {data.map((item) => (
           <div className="text-3xl font-bold mt-3 bg-red-400 justify-center items-center rounded-md" key={item.id}>{item.name}</div>
@@ -29,8 +33,12 @@ function App() {
       <Button title='artır' />
       <Input />
       <CheckBox /> */}
-      <Login />
-    </>
+        {/* <Login /> */}
+        <p>Count değeri: {count}</p>
+        <button onClick={() => setCount(count + 1)}>Artır</button>
+      </div>
+      <MyComponent />
+    </div>
   )
 }
 
