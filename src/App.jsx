@@ -14,7 +14,7 @@ function App() {
       alert("Kullanıcılar yüklenemedi. Lütfen daha sonra tekrar deneyiniz.");
     }
   };
-  const geTUserById = async (userId) => {
+  const getUserById = async (userId) => {
     try {
       const response = await axios.get(`${BASE_Url}/users/${userId}`);
       console.log(response.data);  // Kullanıcı verileri burada
@@ -45,6 +45,16 @@ function App() {
       alert("Kullanıcılar yüklenemedi. Lütfen daha sonra tekrar deneyiniz.");
     }
   }
+  const deleteUserById = async (userId) => {
+    try {
+      const response = await axios.delete(`${BASE_Url}/users/${userId}`);
+      console.log(response.data);  // Kullanıcı verileri burada
+      // setUsers(response.data);  // (React kullanıyorsanız)
+    } catch (error) {
+      console.error("Bir hata oluştu:", error);
+      alert("Kullanıcılar yüklenemedi. Lütfen daha sonra tekrar deneyiniz.");
+    }
+  };
   // const newUser = {
   //   "firstName": "jone",
   //   "lastName": "mac",
@@ -54,6 +64,7 @@ function App() {
   //   "password": "123456"
   // }
   useEffect(() => {
+    // deleteUserById("093a")
     // getAllUser();  // Fonksiyonu çalıştırmak
     // createUser(newUser);
     // updateUser("093a", {

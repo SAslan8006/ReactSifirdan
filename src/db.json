@@ -62,15 +62,6 @@
       "phoneNumber": "111111111",
       "emailAddress": "jone.mac@learningcontainer.com",
       "password": "123456"
-    },
-    {
-      "firstName": "jone",
-      "lastName": "mac",
-      "username": "ali23",
-      "phoneNumber": "111111111",
-      "emailAddress": "jone.mac@learningcontainer.com",
-      "password": "123456",
-      "id": "093a"
     }
   ]
 }
