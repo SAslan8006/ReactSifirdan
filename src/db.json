@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Krish",
+      "lastName": "Lee",
+      "username": "ali1",
+      "phoneNumber": "123456",
+      "emailAddress": "krish.lee@learningcontainer.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "firstName": "racks",
+      "lastName": "jacson",
+      "username": "ali2",
+      "phoneNumber": "123456",
+      "emailAddress": "racks.jacson@learningcontainer.com",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "firstName": "denial",
+      "lastName": "roast",
+      "username": "ali3",
+      "phoneNumber": "33333333",
+      "emailAddress": "denial.roast@learningcontainer.com",
+      "password": "123456"
+    },
+    {
+      "id": 4,
+      "firstName": "devid",
+      "lastName": "neo",
+      "username": "ali4",
+      "phoneNumber": "222222222",
+      "emailAddress": "devid.neo@learningcontainer.com",
+      "password": "123456"
+    },
+    {
+      "id": 5,
+      "firstName": "jone",
+      "lastName": "mac",
+      "username": "ali5",
+      "phoneNumber": "111111111",
+      "emailAddress": "jone.mac@learningcontainer.com",
+      "password": "123456"
+    },
+    {
+      "id": "6735",
+      "firstName": "jone",
+      "lastName": "mac",
+      "username": "ali5",
+      "phoneNumber": "111111111",
+      "emailAddress": "jone.mac@learningcontainer.com",
+      "password": "123456"
+    },
+    {
+      "id": "706a",
+      "firstName": "jone",
+      "lastName": "mac",
+      "username": "ali5",
+      "phoneNumber": "111111111",
+      "emailAddress": "jone.mac@learningcontainer.com",
+      "password": "123456"
+    },
+    {
+      "firstName": "jone",
+      "lastName": "mac",
+      "username": "ali23",
+      "phoneNumber": "111111111",
+      "emailAddress": "jone.mac@learningcontainer.com",
+      "password": "123456",
+      "id": "093a"
+    }
+  ]
+}
