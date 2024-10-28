@@ -12,7 +12,7 @@ export const getAllUsers = createAsyncThunk(
 );
 
 const initialState = {
-    user: [],
+    users: [],
     loading: 'idle',
     error: null
 };
@@ -29,7 +29,7 @@ const usersSlice = createSlice({
                 state.error = null;
             })
             .addCase(getAllUsers.fulfilled, (state, action) => {
-                state.user = action.payload;
+                state.users = action.payload;
                 state.loading = 'succeeded';
             })
             .addCase(getAllUsers.rejected, (state, action) => {
