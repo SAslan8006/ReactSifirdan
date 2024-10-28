@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { userAPI } from './userAPI'
 
 // First, create the thunk
 const fetchUserById = createAsyncThunk(
@@ -10,15 +9,11 @@ const fetchUserById = createAsyncThunk(
     },
 )
 
-interface UsersState {
-    entities: User[]
-    loading: 'idle' | 'pending' | 'succeeded' | 'failed'
-}
 
 const initialState = {
-    entities: [],
-    loading: 'idle',
-} satisfies UserState as UsersState
+    user: [],
+    loading: 'idle' | 'pending' | 'succeeded' | 'failed'
+}
 
 // Then, handle actions in your reducers:
 const usersSlice = createSlice({
