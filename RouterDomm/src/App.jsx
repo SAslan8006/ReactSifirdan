@@ -6,6 +6,7 @@ import Home from './pages/Home.jsx'
 import About from './pages/About';
 import Employe from './pages/Employe';
 import NotFoundPage from './pages/NotFoundPage.jsx'
+import Contact from './pages/Contact';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -16,14 +17,13 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />}>
           <Route path='employee' element={<Employe />} />
+          <Route path='company' element={<Employe />} />
         </Route>
-
+        <Route path='/contact' element={<Contact />} />
         <Route path="*" element={<NotFoundPage />} />
-
       </Routes>
     </div>
-
-  )
+  );
 }
 
 export default App
