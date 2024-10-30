@@ -13,13 +13,14 @@ import { setDrawer } from '../redux/slices/basketSlice';
 
 
 function Header() {
-
+    //theme 
     const [theme, setTheme] = useState(false);
     const dispatch = useDispatch();
 
     const navigate = useNavigate();
 
     const { products } = useSelector((store) => store.basket);
+    //theme 
     const changeTheme = () => {
         const root = document.getElementById("root");
         if (theme) {

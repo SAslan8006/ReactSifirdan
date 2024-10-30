@@ -11,7 +11,7 @@ function Product({ product }) {
         <div className='card'>
             <img className='image' src={image} alt="" />
             <div>
-                <p style={{ textAlign: 'center', height: '50px' }}>{title}</p>
+                <p style={{ textAlign: 'center', height: '50px' }}>{title.slice(0, 96)}</p>
                 <h3 style={{ textAlign: 'center' }}>{price}₺</h3>
             </div>
 
