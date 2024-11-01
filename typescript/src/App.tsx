@@ -8,10 +8,16 @@ function App() {
   //  let name: string|number = 'John';
   // String , boolean , number
   // interface- type: kendi tipimizi oluşturmamızı sağlıyor. 
-  type user{
+  type user={
     name: string,
     age: number,
     email: string
+  }
+
+  const user: user = {
+    name: 'John',
+    age: 25,
+    email: 'd2j1K@example.com'
   }
 
   return (
