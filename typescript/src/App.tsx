@@ -2,24 +2,38 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
   //Union Types
   //  let age:string|number = 25;
   //  let name: string|number = 'John';
   // String , boolean , number
   // interface- type: kendi tipimizi oluşturmamızı sağlıyor. 
-  type user={
+  type User={
     name: string,
     age: number,
     email: string
   }
 
-  const user: user = {
+  // let array : string[] = ['John','John','John'];
+  const array2: User[] = [{name: 'John', age: 25, email: 'd2j1K@example.com'}]
+  const user: User = {
     name: 'John',
     age: 25,
     email: 'd2j1K@example.com'
   }
 
+interface User2{
+  name: string,
+  age?: number, // age zorunlu değildir
+  email: string
+}
+
+const user2: User2 = {
+  name: 'John',
+  age: 25,
+  email: 'd2j1K@example.com'
+}
+
+ console.log(user2.name);
   return (
     <>
 
@@ -28,3 +42,55 @@ function App() {
 }
 
 export default App
+
+
+//Funtion Önemli bir durum
+
+function getFullName(name: string, surname: string): string {
+  return name + ' ' + surname
+} 
+
+console.log(getFullName('John', 'Doe'))
+
+
+//Function Overloading donen durum da nasıl geleceğini belirleyebiliriz
+function add(a: number, b: number): number|string {
+  return a + b
+}
+
+console.log(add(5, 10))
+
+// Döndürmeyecekse : void : Geriye birşey döndürmeyen metottur.
+function write(array:Array<string>):void{
+  array.forEach((value:string)=>console.log(value))
+}
+
+let array:Array<string> = ['aasda','basdas','adasdac']
+write(array)
+
+
+interface User{
+  name: string,
+  age: number,
+  email: string
+}
+
+function write2(array:Array<User>):void{
+  array.forEach((value:User)=>console.log(value.name))
+}
+const obj1: User = {
+  name: 'John',
+  age: 25,
+  email: 'd2j1K@example.com'
+}
+
+const obj2: User = {
+  name: 'John',
+  age: 25,
+  email: 'd2j1K@example.com'
+}
+
+const myArray:Array<User> = [obj1,obj2]
+
+console.log(myArray)
+write2(myArray)
