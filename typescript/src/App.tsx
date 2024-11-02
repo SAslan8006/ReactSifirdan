@@ -132,3 +132,36 @@ const obj4: GenericType<number> = {
 const myArray1:GenericType<string|number>[] = [obj3,obj4]
 
 console.log(myArray1)
+
+function yazdir2<T>(array:GenericType<T>[]):void{
+  console.log(array)
+  array.forEach((value:GenericType<T>)=>console.log(value.name))
+} // T generic tipini alir
+
+yazdir2(myArray1)
+
+
+// Miras alma - extends
+interface User1{
+  id: number,
+  name: string,
+  age: number,
+  email: string,
+}
+interface Extend1 extends User1{
+  city: string,
+  country: string,
+} // GenericType<string> miras alir
+
+const obj5: Extend1 = {
+  id: 1,
+  name: 'John',
+  age: 25,
+  email: 'd2j1K@example.com',
+  city: 'Istanbul',
+  country: 'Turkey'
+}
+
+console.log(obj5)
+
+
