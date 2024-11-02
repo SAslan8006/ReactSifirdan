@@ -94,3 +94,41 @@ const myArray:Array<User> = [obj1,obj2]
 
 console.log(myArray)
 write2(myArray)
+
+
+function yazdir(array:string[]):void{
+  console.log(array)
+}
+
+yazdir(array)
+
+// Generic Fonksiyon demektir :  <T>
+function yazdir1<T>(array:T[]):void{
+  console.log(array)
+}
+
+yazdir1(["array1","array2"])
+yazdir1([1,2,3])
+yazdir1([true,false])
+
+
+interface GenericType<T>{
+  name: string,
+  age: number,
+  email: T
+}
+const obj3: GenericType<string> = {
+  name: 'John',
+  age: 25,
+  email: 'd2j1K@example.com'
+} // string
+
+const obj4: GenericType<number> = {
+  name: 'John',
+  age: 25,
+  email: 1
+} // number
+
+const myArray1:GenericType<string|number>[] = [obj3,obj4]
+
+console.log(myArray1)
