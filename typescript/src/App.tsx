@@ -165,3 +165,63 @@ const obj5: Extend1 = {
 console.log(obj5)
 
 
+// Partial , Readonly, Required, pick & omit
+interface User2{
+  id: number,
+  name: string,
+  lastname:string,
+  age?: number, // age zorunlu değildir opsiyoneldir
+  email: string,
+}
+interface Extend2 extends User2{
+  city: string,
+  country: string,
+} // GenericType<string> miras alir
+
+const obj6: Extend2 = {
+  id: 1,
+  name: 'John',
+  age: 25,  
+  email: 'd2j1K@example.com',
+  city: 'Istanbul',
+  country: 'Turkey'
+}
+
+//İçerisindeki herhangi bir alanı doldurmak için Partial kullanılır
+const obj7 :Partial<Extend2>={
+  id: 1,
+  name: 'John',
+}
+
+//İçerisindeki herşeyi doldurmak zorunlu olduğundan Required kullanılır
+const obj8 :Required<Extend2>={
+  id: 1,
+  name: 'John',
+  age: 25,  
+  email: 'd2j1K@example.com',
+  city: 'Istanbul',
+  country: 'Turkey'
+}
+
+//İçerisindeki alanları sadece okunabilir yapmak için Readonly kullanılır
+const obj11 :Readonly<Extend2>={
+  id: 1,
+  name: 'John',
+}
+// readonly obj11.id = 2; // readonly obj11.id = 2 // hata verir
+
+
+//İçerisindeki bazı alanları belirlemek için Pick kullanılır sadece belirtilen değişkeni almak için kullanılır pick
+const obj9 :Pick<Extend2,'id'|'name'> = {
+  id: 1,
+  name: 'John',
+}
+
+
+//Belirtilen değişkeninin dışındakileri almak için Omit kullanılır
+const obj10 :Omit<Extend2,'id'|'name'> = {
+  age: 25,  
+  email: 'd2j1K@example.com',
+  city: 'Istanbul',
+  country: 'Turkey'
+}
