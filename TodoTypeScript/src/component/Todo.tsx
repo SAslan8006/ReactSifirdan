@@ -3,6 +3,7 @@ import { FaCheck, FaRegEdit } from 'react-icons/fa'
 import { IoMdRemoveCircleOutline } from 'react-icons/io'
 import { useDispatch } from 'react-redux';
 import { TodoType } from '../types/Types';
+import { removeTodoById } from '../redux/todoSlice';
 interface TodoProps {
   todoProps: TodoType
 }
@@ -15,6 +16,7 @@ function Todo({ todo }: TodoProps) {
     const [editable, setEditable] = useState<boolean>(false);
     const [newTodo, setNewTodo] = useState<string>(content);
   const handleRemoveTodo = () => {
+    dispatch(removeTodoById(id));
 }
 
 const handleUpdateTodo = () => {
