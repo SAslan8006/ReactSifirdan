@@ -33,3 +33,7 @@ body {
   font-weight: 700;
   margin-top: 10px;
 }
+.icons {
+  font-size: 22px;
+  cursor: pointer;
+}
