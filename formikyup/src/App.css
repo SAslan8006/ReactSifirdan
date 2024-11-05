@@ -1,42 +1,72 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #f3f4f6; /* Açık gri-beyaz */
+  background-color: #1f2937; /* Koyu gri-mavi */
+  font-family: Arial, sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #374151; /* Orta koyulukta gri */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 10px;
+  padding-right: 10px;
 }
 
-.card {
-  padding: 2em;
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 2px solid #9ca3af; /* Nötr gri */
+  outline: none;
+  background-color: #4b5563; /* Koyu gri */
+  color: #e5e7eb; /* Hafif beyaz-gri */
+  transition: border-color 0.3s ease;
 }
 
-.read-the-docs {
-  color: #888;
+input:focus {
+  border-bottom: 2px solid #8b5cf6; /* Hafif mor vurgulu */
+}
+
+.saveButton {
+  width: 95%;
+  padding: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #8b5cf6; /* Yumuşak mor */
+  color: #f9fafb; /* Beyazımsı ton */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.saveButton:hover {
+  background-color: #7c3aed; /* Biraz daha koyu mor */
+}
+
+.saveButton:active {
+  transform: scale(0.98);
 }
