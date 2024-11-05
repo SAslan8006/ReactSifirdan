@@ -70,3 +70,7 @@ input:focus {
 .saveButton:active {
   transform: scale(0.98);
 }
+.input-error {
+  color: #f56565; /* Hafif kırmızı */
+  font-size: 15px;
+}
