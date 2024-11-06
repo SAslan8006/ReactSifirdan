@@ -1,4 +1,5 @@
 import './App.css'
+import MUIAutocomplete from './component/MUIAutocomplete'
 import MUIButton from './component/MUIButton'
 import MUICheckBox from './component/MUICheckBox'
 import MUISelect from './component/MUISelect'
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <div>
-      <MUICheckBox />
+      <MUIAutocomplete />
     </div>
   )
 }
