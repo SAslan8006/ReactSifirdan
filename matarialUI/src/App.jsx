@@ -6,12 +6,13 @@ import MUISelect from './component/MUISelect'
 import MUITextFiedl from './component/MUITextFiedl'
 import MUIBox from './component/MUIBox';
 import MUIStack from './component/MUIStack'
+import MUIGrid from './component/MUIGrid'
 
 function App() {
 
   return (
     <div>
-      <MUIStack />
+      <MUIGrid />
     </div>
   )
 }
