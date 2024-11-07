@@ -11,11 +11,12 @@ import MUICard from './component/MUICard'
 import MUIAccordion from './component/MUIAccordion'
 import MUIBar from './component/MUIBar'
 import MUIImageList from './component/MUIImageList'
+import MUIDrawer from './component/MUIDrawer';
 
 function App() {
 
   return (
-    <MUIImageList />
+    <MUIDrawer />
   )
 }
 
