@@ -10,13 +10,15 @@ import MUIGrid from './component/MUIGrid'
 import MUICard from './component/MUICard'
 import MUIAccordion from './component/MUIAccordion'
 import MUIBar from './component/MUIBar'
-import MUIImageList from './component/MUIImageList'
-import MUIDrawer from './component/MUIDrawer';
+import MUIImageList from './component/MUIImageList' //ImageList componentleri için kullandım.
+import MUIDrawer from './component/MUIDrawer'; //Drewer componentleri için kullandım.
+import MUIBadge from './component/MUIBadge'  //Sepet componentleri için kullandım.
+import MUIAvatar from './component/MUIAvatar'
 
 function App() {
 
   return (
-    <MUIDrawer />
+    <MUIAvatar />
   )
 }
 
