@@ -10,11 +10,12 @@ import MUIGrid from './component/MUIGrid'
 import MUICard from './component/MUICard'
 import MUIAccordion from './component/MUIAccordion'
 import MUIBar from './component/MUIBar'
+import MUIImageList from './component/MUIImageList'
 
 function App() {
 
   return (
-    <MUIBar />
+    <MUIImageList />
   )
 }
 
