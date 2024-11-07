@@ -13,12 +13,13 @@ import MUIBar from './component/MUIBar'
 import MUIImageList from './component/MUIImageList' //ImageList componentleri için kullandım.
 import MUIDrawer from './component/MUIDrawer'; //Drewer componentleri için kullandım.
 import MUIBadge from './component/MUIBadge'  //Sepet componentleri için kullandım.
-import MUIAvatar from './component/MUIAvatar'
+import MUIAvatar from './component/MUIAvatar' //Avatar componentleri için kullandım.
+import MUITooltip from './component/MUITooltip' //Tooltip componentleri için kullandım. Açıklama için kullanılmaktadır.
 
 function App() {
 
   return (
-    <MUIAvatar />
+    <MUITooltip />
   )
 }
 
