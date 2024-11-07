@@ -9,13 +9,12 @@ import MUIStack from './component/MUIStack'
 import MUIGrid from './component/MUIGrid'
 import MUICard from './component/MUICard'
 import MUIAccordion from './component/MUIAccordion'
+import MUIBar from './component/MUIBar'
 
 function App() {
 
   return (
-    <div>
-      <MUIAccordion />
-    </div>
+    <MUIBar />
   )
 }
 
