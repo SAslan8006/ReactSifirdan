@@ -15,11 +15,12 @@ import MUIDrawer from './component/MUIDrawer'; //Drewer componentleri için kul
 import MUIBadge from './component/MUIBadge'  //Sepet componentleri için kullandım.
 import MUIAvatar from './component/MUIAvatar' //Avatar componentleri için kullandım.
 import MUITooltip from './component/MUITooltip' //Tooltip componentleri için kullandım. Açıklama için kullanılmaktadır.
+import MUIAlert from './component/MUIAlert'
 
 function App() {
 
   return (
-    <MUITooltip />
+    <MUIAlert />
   )
 }
 
