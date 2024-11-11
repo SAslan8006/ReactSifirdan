@@ -44,6 +44,7 @@ function MUISnackbar() {
                 onClose={handleClose}
                 message="Hata Oluştu"
                 action={action}
+                anchorOrigin={{ vertical: 'top', horizontal: 'center' }} //Konum için ayarlanır
             />
         </div>
     )
