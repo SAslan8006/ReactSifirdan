@@ -23,7 +23,7 @@ function MUISnackbar() {
     const action = (
         <React.Fragment>
             <Button color="secondary" size="small" onClick={handleClose}>
-                UNDO
+                Kapat
             </Button>
             <IconButton
                 size="small"
@@ -42,7 +42,7 @@ function MUISnackbar() {
                 open={open}
                 autoHideDuration={6000}
                 onClose={handleClose}
-                message="Note archived"
+                message="Hata Oluştu"
                 action={action}
             />
         </div>
