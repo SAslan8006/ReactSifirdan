@@ -17,11 +17,12 @@ import MUIAvatar from './component/MUIAvatar' //Avatar componentleri için kull
 import MUITooltip from './component/MUITooltip' //Tooltip componentleri için kullandım. Açıklama için kullanılmaktadır.
 import MUIAlert from './component/MUIAlert'
 import MUIDialog from './component/MUIDialog'
+import MUISnackbar from './component/MUISnackbar'
 
 function App() {
 
   return (
-    <MUIDialog />
+    <MUISnackbar />
   )
 }
 
