@@ -39,7 +39,7 @@ body {
   justify-content: center;
 }
 .auth-input {
-  width: 300px;
+  width: 320px;
   height: 30px;
   margin: 10px;
   padding: 10px;
@@ -47,9 +47,11 @@ body {
   border-radius: 5px;
   font-size: 16px;
 }
-
+.auth-button-container {
+  display: flex;
+}
 .auth-button {
-  width: 100px;
+  width: 70px;
   height: 40px;
   margin: 10px;
   padding: 10px;
@@ -62,4 +64,43 @@ body {
   font-weight: bold;
   justify-content: center;
   align-items: center;
+}
+.auth-button-giris {
+  width: 110px;
+  height: 40px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: goldenrod;
+  color: white;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+.auth-button-giris:hover {
+  background-color: #ccc;
+}
+.auth-button:hover {
+  background-color: #ccc;
+}
+.auth-button-google {
+  width: 140px;
+  height: 40px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: goldenrod;
+  color: white;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+.auth-button-google:hover {
+  background-color: #ccc;
 }
