@@ -21,11 +21,12 @@ import MUISnackbar from './component/MUISnackbar'
 import MUIProgres from './component/MUIProgres'
 import MUISkeleton from './component/MUISkeleton'
 import MUITable from './component/MUITable'
+import MUITabs from './component/MUITabs'
 
 function App() {
 
   return (
-    <MUITable />
+    <MUITabs />
   )
 }
 
