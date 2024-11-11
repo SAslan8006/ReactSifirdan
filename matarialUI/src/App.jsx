@@ -18,11 +18,13 @@ import MUITooltip from './component/MUITooltip' //Tooltip componentleri için k
 import MUIAlert from './component/MUIAlert'
 import MUIDialog from './component/MUIDialog'
 import MUISnackbar from './component/MUISnackbar'
+import MUIProgres from './component/MUIProgres'
+import MUISkeleton from './component/MUISkeleton'
 
 function App() {
 
   return (
-    <MUISnackbar />
+    <MUISkeleton />
   )
 }
 
