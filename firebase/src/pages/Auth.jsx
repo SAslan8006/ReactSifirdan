@@ -1,13 +1,14 @@
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FaGoogle } from 'react-icons/fa'
 import { auth } from '../Firebase';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 function Auth() {
     const [email, setEmail] = useState("");
     const [token, setToken] = useState("");
     const [password, setPassword] = useState("");
-
+    const navigate = useNavigate();
     const register = async () => {
         try {
             const response = await createUserWithEmailAndPassword(auth, email, password)
@@ -35,6 +36,7 @@ function Auth() {
                 setEmail(user.email)
                 setToken(user.accessToken);
                 console.log(user)
+                navigate("/")
             }
         } catch (error) {
             toast.error(error.message)
