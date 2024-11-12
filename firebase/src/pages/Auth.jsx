@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { useState } from 'react'
 import { FaGoogle } from 'react-icons/fa'
 import { auth } from '../Firebase';
@@ -26,6 +26,7 @@ function Auth() {
         }
 
     }
+
     const login = async () => {
         try {
             const response = await signInWithEmailAndPassword(auth, email, password)
@@ -44,6 +45,29 @@ function Auth() {
         }
 
     }
+
+    const provider = new GoogleAuthProvider();
+    const googlelogin = async () => {
+        try {
+            const response = await signInWithPopup(auth, provider)
+            const credential = GoogleAuthProvider.credentialFromResult(response);
+            const token = credential.accessToken;
+            const user = response.user;
+            console.log(credential)
+            if (user) {
+                toast.success("Giriş Başarılı " + user.email)
+                setEmail(user.email)
+                setToken(user.accessToken);
+                console.log(user)
+                navigate("/")
+            }
+        } catch (error) {
+            toast.error(error.message)
+
+        }
+
+    }
+
     return (
         <div className='auth'>
             <h1>Auth</h1>
@@ -52,7 +76,7 @@ function Auth() {
                 <input value={password} onChange={(e) => setPassword(e.target.value)} className='auth-input' type="password" placeholder='Password' />
             </div>
             <div className='auth-button-container'>
-                <button className='auth-button-google'> <FaGoogle style={{ marginRight: '3px', marginTop: '2px' }} />Google Giriş</button>
+                <button onClick={googlelogin} className='auth-button-google'> <FaGoogle style={{ marginRight: '3px', marginTop: '2px' }} />Google Giriş</button>
                 <button onClick={login} className='auth-button-giris'>Giriş Yap</button>
                 <button onClick={register} className='auth-button'>Kaydol</button>
             </div>
