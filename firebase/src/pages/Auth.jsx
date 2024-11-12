@@ -1,10 +1,11 @@
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react'
 import { FaGoogle } from 'react-icons/fa'
 import { auth } from '../Firebase';
 import { toast } from 'react-toastify';
 function Auth() {
     const [email, setEmail] = useState("");
+    const [token, setToken] = useState("");
     const [password, setPassword] = useState("");
 
     const register = async () => {
@@ -24,6 +25,23 @@ function Auth() {
         }
 
     }
+    const login = async () => {
+        try {
+            const response = await signInWithEmailAndPassword(auth, email, password)
+            const user = response.user;
+            console.log(user)
+            if (user) {
+                toast.success("Giriş Başarılı " + user.email)
+                setEmail(user.email)
+                setToken(user.accessToken);
+                console.log(user)
+            }
+        } catch (error) {
+            toast.error(error.message)
+
+        }
+
+    }
     return (
         <div className='auth'>
             <h1>Auth</h1>
@@ -33,7 +51,7 @@ function Auth() {
             </div>
             <div className='auth-button-container'>
                 <button className='auth-button-google'> <FaGoogle style={{ marginRight: '3px', marginTop: '2px' }} />Google Giriş</button>
-                <button className='auth-button-giris'>Giriş Yap</button>
+                <button onClick={login} className='auth-button-giris'>Giriş Yap</button>
                 <button onClick={register} className='auth-button'>Kaydol</button>
             </div>
         </div>
