@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { createUserWithEmailAndPassword, GithubAuthProvider, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { useState } from 'react'
 import { FaGoogle } from 'react-icons/fa'
 import { auth } from '../Firebase';
@@ -55,7 +55,7 @@ function Auth() {
             const user = response.user;
             console.log(credential)
             if (user) {
-                toast.success("Giriş Başarılı " + user.email)
+                toast.success("Giriş Google Başarılı " + user.email)
                 setEmail(user.email)
                 setToken(user.accessToken);
                 console.log(user)
@@ -68,6 +68,27 @@ function Auth() {
 
     }
 
+    const provider1 = new GithubAuthProvider();
+    const githupLogin = async () => {
+        try {
+            const response = await signInWithPopup(auth, provider1)
+            const credential = GithubAuthProvider.credentialFromResult(response);
+            const user = response.user;
+            if (user) {
+                toast.success("Giriş Githup Başarılı " + user.email)
+                setEmail(user.email)
+                setToken(user.accessToken);
+                console.log(user)
+                navigate("/")
+            }
+        } catch (error) {
+            toast.error(error.message)
+
+        }
+
+    }
+
+
     return (
         <div className='auth'>
             <h1>Auth</h1>
@@ -76,6 +97,7 @@ function Auth() {
                 <input value={password} onChange={(e) => setPassword(e.target.value)} className='auth-input' type="password" placeholder='Password' />
             </div>
             <div className='auth-button-container'>
+                <button onClick={githupLogin} className='auth-button-google'> <FaGoogle style={{ marginRight: '3px', marginTop: '2px' }} />Githup Giriş</button>
                 <button onClick={googlelogin} className='auth-button-google'> <FaGoogle style={{ marginRight: '3px', marginTop: '2px' }} />Google Giriş</button>
                 <button onClick={login} className='auth-button-giris'>Giriş Yap</button>
                 <button onClick={register} className='auth-button'>Kaydol</button>
