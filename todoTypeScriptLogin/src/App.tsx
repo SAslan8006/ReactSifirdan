@@ -1,8 +1,13 @@
 function App() {
-  return;
-  <div>
-    <h2 className="text-4xl font-bold underline">Hello, World!</h2>
-  </div>;
+  return (
+    <div className="font-sans bg-[#f1d4b3] min-h-screen ">
+      <h1 className="text-[120px] font-bold text-black/5 uppercase absolute left-1/2 -translate-x-1/2 ">
+        TodoApp
+      </h1>
+      <main></main>
+      <footer></footer>
+    </div>
+  );
 }
 
 export default App;
