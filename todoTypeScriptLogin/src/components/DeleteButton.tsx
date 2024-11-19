@@ -1,10 +1,14 @@
 import React from "react";
 
-function DeleteButton() {
+function DeleteButton({ id, setTodos }: any) {
   return (
-    <div>
-      <button>❌</button>
-    </div>
+    <button
+      onClick={() => {
+        setTodos((prev) => prev.filter((t) => t.id !== id));
+      }}
+    >
+      ❌
+    </button>
   );
 }
 
