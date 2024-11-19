@@ -22,7 +22,9 @@ function AddTodoForm() {
           setTodoContent(e.target.value);
         }}
       />
-      <Button buttonType="secondary">Add to List</Button>
+      <Button onClick={() => {}} buttonType="secondary">
+        Add to List
+      </Button>
     </form>
   );
 }

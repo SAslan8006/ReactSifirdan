@@ -3,9 +3,9 @@ export default function Button({
   onClick,
   children,
 }: {
-  buttonType: any;
+  buttonType: string;
   onClick: any;
-  children: any;
+  children: string;
 }): JSX.Element {
   return (
     <button
