@@ -1,7 +1,7 @@
 import React from "react";
 import DeleteButton from "./DeleteButton";
 
-const todos = [
+const todos1 = [
   {
     id: 1,
     content: "Todo 1",
@@ -19,6 +19,7 @@ const todos = [
   },
 ];
 function TodoList() {
+  const [todos, setTodos] = React.useState(todos1);
   return (
     <div>
       <ul>
