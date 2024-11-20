@@ -1,8 +1,17 @@
 import DeleteButton from "./DeleteButton";
 import { useTodosContext } from "../lib/hooks";
+import { Todo } from "../lib/types";
 
 export default function TodoList() {
-  const { todos, toggleTodo, isLoading } = useTodosContext();
+  const {
+    todos,
+    toggleTodo,
+    isLoading,
+  }: {
+    todos: Todo[];
+    toggleTodo: (id: number) => void;
+    isLoading: boolean;
+  } = useTodosContext();
 
   return (
     <ul className="col-[1/2] row-[2/3] bg-[#fff] [scrollbar-width:thin] relative">
