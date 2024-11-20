@@ -4,7 +4,7 @@ import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
 
 export const TodosContext = createContext(null);
 
-export default function TodosContextProvider({ children }) {
+export default function TodosContextProvider({ children }: any) {
   const { isAuthenticated } = useKindeAuth();
 
   // state
@@ -16,7 +16,7 @@ export default function TodosContextProvider({ children }) {
   const completedCount = todos.filter((todo) => todo.completed).length;
 
   // actions / event handlers
-  const addTodo = (content) => {
+  const addTodo = (content: string) => {
     // check if user is logged in
     if (todos.length >= 3 && !isAuthenticated) {
       alert("To add more todos, please log in.");
@@ -27,19 +27,19 @@ export default function TodosContextProvider({ children }) {
       ...todos,
       {
         id: todos.length + 1,
-        content,
+        text: content,
         completed: false,
       },
     ]);
   };
-  const toggleTodo = (id) => {
+  const toggleTodo = (id: number) => {
     setTodos(
       todos.map((todo) =>
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
       )
     );
   };
-  const deleteTodo = (id) => {
+  const deleteTodo = (id: number) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
@@ -51,7 +51,9 @@ export default function TodosContextProvider({ children }) {
       const response = await fetch(
         "https://bytegrad.com/course-assets/api/todos"
       );
+
       const todos = await response.json();
+
       setTodos(todos);
 
       setIsLoading(false);

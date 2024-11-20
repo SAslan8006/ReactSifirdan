@@ -7,11 +7,8 @@ export default function TodoList() {
     todos,
     toggleTodo,
     isLoading,
-  }: {
-    todos: Todo[];
-    toggleTodo: (id: number) => void;
-    isLoading: boolean;
-  } = useTodosContext();
+  }: { todos: Todo[]; toggleTodo: (id: number) => void; isLoading: boolean } =
+    useTodosContext();
 
   return (
     <ul className="col-[1/2] row-[2/3] bg-[#fff] [scrollbar-width:thin] relative">
@@ -39,7 +36,7 @@ export default function TodoList() {
             <span
               className={`${todo.completed ? "line-through text-[#ccc]" : ""}`}
             >
-              {todo.content}
+              {todo.text}
             </span>
 
             <DeleteButton id={todo.id} />
