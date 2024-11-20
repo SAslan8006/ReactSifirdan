@@ -1,16 +1,16 @@
-import React from "react";
+import { useTodosContext } from "../lib/hooks";
 
-function DeleteButton({ id, setTodos }: any) {
+export default function DeleteButton({ id }) {
+  const { deleteTodo } = useTodosContext();
+
   return (
     <button
       onClick={(e) => {
         e.stopPropagation();
-        setTodos((prev) => prev.filter((t) => t.id !== id));
+        deleteTodo(id);
       }}
     >
       ❌
     </button>
   );
 }
-
-export default DeleteButton;

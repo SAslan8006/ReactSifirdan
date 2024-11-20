@@ -1,20 +1,11 @@
-import { useState } from "react";
-import { todos1 } from "./TodoList";
+import { useTodosContext } from "../lib/hooks";
 
 export default function Counter() {
-  const [count, setCount] = useState(0);
+  const { totalCount, completedCount } = useTodosContext();
 
   return (
-    <p
-      onClick={() => {
-        const c = todos1.forEach((todo) => {
-          if (todo.completed == true) {
-            setCount(count + 1);
-          }
-        });
-      }}
-    >
-      <b> {count}</b> / 0 todos completed
+    <p>
+      <b>{completedCount}</b> / {totalCount} todos completed
     </p>
   );
 }

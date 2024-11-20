@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useTodosContext } from "../lib/hooks";
 import Button from "./Button";
 
-function AddTodoForm() {
+export default function AddTodoForm() {
   const [todoContent, setTodoContent] = useState("");
+  const { addTodo } = useTodosContext();
 
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
+        addTodo(todoContent);
         setTodoContent("");
-        console.log(todoContent);
       }}
     >
       <h2 className="text-[#231d15] text-[16px] font-medium">Add a todo</h2>
@@ -22,11 +24,7 @@ function AddTodoForm() {
           setTodoContent(e.target.value);
         }}
       />
-      <Button onClick={() => {}} buttonType="secondary">
-        Add to List
-      </Button>
+      <Button>Add to list</Button>
     </form>
   );
 }
-
-export default AddTodoForm;
