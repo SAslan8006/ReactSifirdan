@@ -1,4 +1,12 @@
-export default function Button({ buttonType, onClick, children }) {
+export default function Button({
+  buttonType,
+  onClick,
+  children,
+}: {
+  buttonType: "primary" | "secondary";
+  onClick: () => void;
+  children: string;
+}) {
   return (
     <button
       onClick={onClick}

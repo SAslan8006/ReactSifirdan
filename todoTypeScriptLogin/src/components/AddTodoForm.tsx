@@ -8,7 +8,7 @@ export default function AddTodoForm() {
 
   return (
     <form
-      onSubmit={(e) => {
+      onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         addTodo(todoContent);
         setTodoContent("");
