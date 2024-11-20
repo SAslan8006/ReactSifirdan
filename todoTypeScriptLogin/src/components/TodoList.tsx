@@ -39,29 +39,27 @@ function TodoList() {
   return (
     <ul>
       {todos.map((todo) => (
-        <div className="flex justify-between items-center pr-2 h-[50px] text-[14px] border-b border-b-[rgba(0,0,0,0.08)]">
-          <li
-            key={todo.id}
-            className={`flex justify-between items-center px-8 h-[50px] text-[14px] cursor-pointer `}
-            onClick={() => {
-              setTodos(
-                todos.map((t) => {
-                  if (t.id === todo.id) {
-                    return { ...t, completed: !t.completed };
-                  }
-                  return t;
-                })
-              );
-            }}
+        <li
+          key={todo.id}
+          className={`flex justify-between items-center px-8 h-[50px] text-[14px] cursor-pointer border-b border-b-[rgba(0,0,0,0.08)]`}
+          onClick={() => {
+            setTodos(
+              todos.map((t) => {
+                if (t.id === todo.id) {
+                  return { ...t, completed: !t.completed };
+                }
+                return t;
+              })
+            );
+          }}
+        >
+          <span
+            className={`${todo.completed ? "line-through text-[#ccc]" : ""}`}
           >
-            <span
-              className={`${todo.completed ? "line-through text-[#ccc]" : ""}`}
-            >
-              {todo.content}
-            </span>
-          </li>
+            {todo.content}
+          </span>
           <DeleteButton setTodos={setTodos} id={todo.id} />
-        </div>
+        </li>
       ))}
     </ul>
   );
