@@ -39,10 +39,10 @@ function TodoList() {
   return (
     <ul>
       {todos.map((todo) => (
-        <div className="flex justify-between items-center pr-2 h-[50px] text-[14px] ">
+        <div className="flex justify-between items-center pr-2 h-[50px] text-[14px] border-b border-b-[rgba(0,0,0,0.08)]">
           <li
             key={todo.id}
-            className={`flex justify-between items-center px-8 h-[50px] text-[14px] cursor-pointer border-b border-b-[rgba(0,0,0,0.08)]`}
+            className={`flex justify-between items-center px-8 h-[50px] text-[14px] cursor-pointer `}
             onClick={() => {
               setTodos(
                 todos.map((t) => {
