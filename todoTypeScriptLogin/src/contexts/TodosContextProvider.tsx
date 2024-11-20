@@ -2,7 +2,17 @@ import { createContext, useEffect, useState } from "react";
 import { Todo } from "../lib/types";
 import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
 
-export const TodosContext = createContext(null);
+interface TodosContextValue {
+  todos: Todo[];
+  isLoading: boolean;
+  totalCount: number;
+  completedCount: number;
+  addTodo: (content: string) => void;
+  toggleTodo: (id: number) => void;
+  deleteTodo: (id: number) => void;
+}
+
+export const TodosContext = createContext<TodosContextValue | null>(null);
 
 export default function TodosContextProvider({ children }: any) {
   const { isAuthenticated } = useKindeAuth();
