@@ -1,6 +1,6 @@
 import { useTodosContext } from "../lib/hooks";
 
-export default function DeleteButton({ id }) {
+export default function DeleteButton({ id }: { id: number }) {
   const { deleteTodo } = useTodosContext();
 
   return (

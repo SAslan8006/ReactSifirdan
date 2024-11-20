@@ -24,7 +24,7 @@ export default function AddTodoForm() {
           setTodoContent(e.target.value);
         }}
       />
-      <Button>Add to list</Button>
+      <Button buttonType="primary">Add to list</Button>
     </form>
   );
 }

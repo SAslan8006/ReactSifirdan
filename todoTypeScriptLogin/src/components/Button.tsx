@@ -3,9 +3,9 @@ export default function Button({
   onClick,
   children,
 }: {
-  buttonType: "primary" | "secondary";
-  onClick: () => void;
-  children: string;
+  buttonType?: "primary" | "secondary";
+  onClick?: () => void;
+  children?: React.ReactNode;
 }) {
   return (
     <button
