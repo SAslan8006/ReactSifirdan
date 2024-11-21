@@ -1,6 +1,7 @@
 import DeleteButton from "./DeleteButton";
 import { useTodosContext } from "../lib/hooks";
 import { Todo } from "../lib/types";
+import { cappitalizeFirstLetter } from "./../lib/utils";
 
 export default function TodoList() {
   const {
@@ -36,7 +37,8 @@ export default function TodoList() {
             <span
               className={`${todo.completed ? "line-through text-[#ccc]" : ""}`}
             >
-              {todo.text}
+              {/* İlk Kelimeyi Büyük Yapar */}
+              {cappitalizeFirstLetter(todo.text)}
             </span>
 
             <DeleteButton id={todo.id} />
