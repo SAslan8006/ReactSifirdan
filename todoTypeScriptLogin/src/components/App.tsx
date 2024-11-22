@@ -10,6 +10,7 @@ function App() {
   // const todosCompletedPercentage = useMemo(() => {
   //   return todos.filter((todo) => todo.completed);
   // }, [todos]); // bağımlılıklar dizisi eklendi
+
   return (
     <div className="font-sans bg-[#f1d4b3] min-h-screen flex justify-center items-center flex-col">
       <BackgroundHeading />
