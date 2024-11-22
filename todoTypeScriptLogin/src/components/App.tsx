@@ -3,8 +3,13 @@ import Header from "./Header";
 import SideBar from "./SideBar";
 import Footer from "./Footer";
 import TodoList from "./TodoList";
+import { useMemo } from "react";
 
 function App() {
+  // const todos = [...]; // todos değişkeninin tanımlandığı varsayılarak
+  // const todosCompletedPercentage = useMemo(() => {
+  //   return todos.filter((todo) => todo.completed);
+  // }, [todos]); // bağımlılıklar dizisi eklendi
   return (
     <div className="font-sans bg-[#f1d4b3] min-h-screen flex justify-center items-center flex-col">
       <BackgroundHeading />
