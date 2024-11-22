@@ -3,13 +3,24 @@ import Header from "./Header";
 import SideBar from "./SideBar";
 import Footer from "./Footer";
 import TodoList from "./TodoList";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 
 function App() {
   // const todos = [...]; // todos değişkeninin tanımlandığı varsayılarak
   // const todosCompletedPercentage = useMemo(() => {
   //   return todos.filter((todo) => todo.completed);
   // }, [todos]); // bağımlılıklar dizisi eklendi
+  // useEffect(() => {
+  //   localStorage.setItem("todos", JSON.stringify(todos));
+  //   const handleEscapeKey = (e: KeyboardEvent) => {
+  //     if (e.key === "Escape") {
+  //       e.preventDefault();
+  //       e.stopPropagation();
+  //       close();
+  //       //Delete Todo
+  //     }
+  //   };
+  // }, [todos]);
 
   return (
     <div className="font-sans bg-[#f1d4b3] min-h-screen flex justify-center items-center flex-col">
